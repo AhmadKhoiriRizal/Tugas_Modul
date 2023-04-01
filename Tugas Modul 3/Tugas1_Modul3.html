@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Program Sederhana HTML Cek Status Menikah </title>
+    </head>
+    <body>
+        <h1>Program Sederhana HTML Cek Status Menikah</h1>
+        <p id="Text"></p>
+        <p id="Nama"></p>
+        <p id="Umur"></p>
+        <p id="Status"></p>
+        <script>
+            //deklarasi program firstName, age, lastName, dan isMarried
+            var firstname = "Ahmad", middlename = " Khoiri ", lastname = "Rizal";
+            var age = 21;
+            var isMarried = false;
+
+            //pengujian kode program menggunakan console.log()
+            console.log("Nama Saya         : " + firstname + middlename + lastname);
+            console.log("Saya Berumur      : " + age);
+            console.log("Status Pernikahan :",isMarried ? "Sudah Menikah":"Belum Menikah"); 
+            
+            //pengujian kode program menggunakan document.write(); atau innerHTML
+            document.write("Manampilkan Program Cek Status Menikah Mengunakan document.write()<br><br>")
+            document.write("Nama Saya         : " + firstname + middlename + lastname+"<br>");
+            document.write("Saya Berumur      : " + age+"<br>");
+            document.write("Status Pernikahan : ",isMarried ? "Sudah Menikah":"Belum Menikah"+"<br>"); 
+
+            //pengujian kode program menggunakan innerHTML
+            document.getElementById("Text").innerHTML = ("Manampilkan Program Cek Status Menikah Mengunakan innerHTML<br><br>"),
+            document.getElementById("Nama").innerHTML = ("Nama Saya         : " + firstname + middlename + lastname),
+            document.getElementById("Umur").innerHTML = ("Saya Berumur      : " + age),
+            document.getElementById("Status").innerHTML = ("Status Pernikahan : ",isMarried ? "Sudah Menikah":"Belum Menikah"+"<br><br>");
+        </script>
+    </body>
+</html>
