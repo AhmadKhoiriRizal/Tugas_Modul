@@ -1,13 +1,14 @@
-//Bisa ditambah variabel baru dan 
-//variabel lama masih ditampilkan
+//Bisa ditambah variabel baru namun
+//variabel lama tidak ditampilkan
 var message="Mari Belajar";
-message += " Javascript";
-message += " Untuk Pemula";
-/*Bisa ditambah variabel baru namun
+var message = "Javascript";
+var message = "Untuk Pemula";
+/*Bisa ditambah variabel baru namun 
+tidak bisa menggunakan nama yang sama
 variabel lama tidak ditampilkan*/
 let nomber=15;
-nomber=50;
-nomber=95;
+let nomber1=50;
+let nomber2=95;
 //Sifat variabel tetap dan tidak bisa dirubah lagi
 const point=100;
-console.log(message, nomber, point);
+console.log(message, nomber,nomber1, nomber2, point);
