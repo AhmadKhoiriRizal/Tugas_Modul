@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Contoh Program Trthy Falsy HTML</title>
+    </head>
+    <body>
+        <h1>Program Truthy Falsy Pada HTML</h1>
+    <h4>Ini adalah contoh Program Truthy Falsy Pada Halaman WEB</h4>
+    <p id="Daftar.Menu"></p>
+   
+    <label for="Menu">Pilih Menu</label>
+    <input type="number" id="Menu"><br>
+    <button type="button" onclick="Pesan()">Pesan</button>
+ 
+    <p id="Hasil"></p>
+    <script>
+        document.getElementById("Daftar.Menu").innerHTML = "Daftar Minuman<br>1. Es Teh 2000<br>2. Es Jeruk 3000<br>3. Es Campur 4000";
+        function Pesan() {
+        var Menu = parseInt(document.getElementById("Menu").value);
+        var Hasil = document.getElementById("Hasil");
+        if (Menu==1) {
+            Hasil.innerHTML = "Total Pesanan 2000<br><h4>Silahkan Ditunggu Pesanannya</h4>";
+        } else if (Menu==2) {
+            Hasil.innerHTML = "Total Pesanan 3000<br><h4>Silahkan Ditunggu Pesanannya</h4>";
+        } else if (Menu==3) {
+            Hasil.innerHTML = "Total Pesanan 4000<br><h4>Silahkan Ditunggu Pesanannya</h4>";
+        } else if (Menu>=4 || Menu<=0) {
+            Hasil.innerHTML = "<h4>Input Yang Anda Masukkan Salah</h4>";
+        } else {
+            Hasil.innerHTML = "<h4>Pilih Pesanan Anda Dulu</h4>"+Menu;
+        }
+    }
+    </script>
+    </body>
+</html>

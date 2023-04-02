@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Tugas 2 Modul 3</title>
+    </head>
+    <body>
+        <h1>Program Logika If Mengevaluasi Nilai Ujian</h1>
+        <h4>Masukkan Data Dengan Benar</h4><hr>
+        <label for="Nama" >Masukkan Nama Siswa  : </label>
+        <input type="text" id="Name"><br><br>
+        <label for="NIM" >Masukkan NIM Siswa     : </label>
+        <input type="text" id="NIMSiswa"><br><br>
+        <label for="Nilai">Masukkan Nilai Ujian   : </label>
+        <input type="Number" id="Nilai"><br><br>
+        <button type="button" onclick="Cek()">Cek Hasil</button><br><hr>
+        <p id="Nama"></p>
+        <p id="NIM"></p>
+        <p id="Hasil"></p><hr>
+        <script>
+            function Cek() {
+                var Nama = document.getElementById("Name").value;
+                document.getElementById("Nama").innerHTML = "Nama Siswa : " + Nama;
+                var NIM = document.getElementById("NIMSiswa").value;
+                document.getElementById("NIM").innerHTML ="NIM Siswa : " + NIM;
+                var Nilai = parseInt(document.getElementById("Nilai").value);
+                var Hasil = document.getElementById("Hasil");
+
+                if (Nilai >= 90 && Nilai <= 100) {
+                    Hasil.innerHTML = "Selamat! Anda Mendapatkan Nilai A Dengan Nilai Score : "+Nilai;
+                    
+                } else if (Nilai >= 80 && Nilai <= 89) {
+                    Hasil.innerHTML = "Anda Mendapatkan Nilai B Dengan Nilai Score : "+Nilai;
+                } else if (Nilai >= 70 && Nilai <=79) {
+                    Hasil.innerHTML = "Anda Mendapatkan Nilai C Dengan Nilai Score : "+Nilai;
+                } else if (Nilai >= 60 && Nilai <= 69) {
+                    Hasil.innerHTML = "Anda Mendapatkan Nilai D Dengan Nilai Score : "+Nilai;
+                } else if (Nilai >= 0 && Nilai <= 59) {
+                    Hasil.innerHTML = "Anda Mendapatkan Nilai E Dengan Nilai Score : "+Nilai;
+                } else if (Nilai <=-1 || Nilai >= 101) {
+                    Hasil.innerHTML = "<h4>Input Yang Anda Masukkan Salah</h4>";
+                } else  {
+                    Hasil.innerHTML = "Masukkan Nilai Terlebih Dahulu "+Nilai;
+                }
+            }
+        </script>
+    </body>
+</html>

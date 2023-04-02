@@ -20,7 +20,7 @@
             console.log("Status Pernikahan :",isMarried ? "Sudah Menikah":"Belum Menikah"); 
             
             //pengujian kode program menggunakan document.write(); atau innerHTML
-            document.write("Manampilkan Program Cek Status Menikah Mengunakan document.write()<br><br>")
+            document.write("<hr>Manampilkan Program Cek Status Menikah Mengunakan document.write()<br><br>")
             document.write("Nama Saya         : " + firstname + middlename + lastname+"<br>");
             document.write("Saya Berumur      : " + age+"<br>");
             document.write("Status Pernikahan : ",isMarried ? "Sudah Menikah":"Belum Menikah"+"<br>"); 
@@ -29,7 +29,7 @@
             document.getElementById("Text").innerHTML = ("Manampilkan Program Cek Status Menikah Mengunakan innerHTML<br><br>"),
             document.getElementById("Nama").innerHTML = ("Nama Saya         : " + firstname + middlename + lastname),
             document.getElementById("Umur").innerHTML = ("Saya Berumur      : " + age),
-            document.getElementById("Status").innerHTML = ("Status Pernikahan : ",isMarried ? "Sudah Menikah":"Belum Menikah"+"<br><br>");
+            document.getElementById("Status").innerHTML = ("Setatus Pernikahan : " + isMarried ? "Sudah Menikah":"Belum Menikah"+"<br><br>");
         </script>
     </body>
 </html>

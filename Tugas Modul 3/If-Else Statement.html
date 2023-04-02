@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Contoh Program If Else Statement Di HTML</title>
+    </head>
+    <body>
+        <h1>Program If Else Statement Cek Nilai Ulangan</h1>
+        <form>
+            <label for ="Nilai">Masukkan nilai</label>
+            <input type="Number" id="Nilai"><br>
+            <button type="Button" onclick="Hitung()">Hitung</button>
+        </form>
+        <p id ="Hasil"></p>
+        <script>
+            function Hitung() {
+                var Nilai = parseInt(document.getElementById("Nilai").value);
+                var Hasil = document.getElementById("Hasil");
+
+                if (Nilai >= 70 && Nilai <=100) {
+                    Hasil.innerHTML = "Siswa dinyatakan lulus dengan nilai "+Nilai;
+                } else if (Nilai >= 0 && Nilai <= 69) {
+                    Hasil.innerHTML = "Siswa dinyatakan tidak lulus dengan nilai "+Nilai;
+                } else if (Nilai<=-1 || Nilai>=101) {
+                    Hasil.innerHTML = "<h4>Input Yang Anda Masukkan Salah</h4>";
+                } else {
+                    Hasil.innerHTML = "<h4>Nilai Masih Kosong atau </h4>"+Nilai;
+                }
+            }
+        </script>
+    </body>
+</html>
