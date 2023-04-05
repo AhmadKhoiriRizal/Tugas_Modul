@@ -3,6 +3,18 @@
         <title>Contoh Program For Of Loop</title>
     </head>
     <body>
-        
+        <h1>Perogram For of Loop Pada Halaman HTML</h1>
+        <p id="description"></p>
+        <Script>
+            let Daftar_nama = ["Tyo","Hilma","Alfina","Fahmi","Lala Po"];
+
+            for (const arrayItem of Daftar_nama) {
+                //output menggunakan document.write menampilkan semua yang di dalam array
+                document.write("Nama : "+arrayItem+"<br>");
+
+                //output menggunakan document.getElemetById hanya menampilkan data array terakhir
+                document.getElementById("description").innerHTML = "Nama : " +arrayItem;
+            }
+        </Script>
     </body>
 </html>

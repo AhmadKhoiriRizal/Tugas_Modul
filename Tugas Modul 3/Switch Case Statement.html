@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Contoh Program Switch Case Statement</title>
+    </head>
+    <body>
+        <h1>Program Switch Case Statement</h1>
+        <p id ="daftar"></p>
+        <label for="Menu">Pilih Bahasa</label>
+        <input type="text" id="Menu"><br><br>
+        <button type="button" onclick="Mulai()">Bayar</button>
+        <p id="Hasil"></p>
+        <script>
+            document.getElementById("daftar").innerHTML=("<h4>Menu Makanan</h4>"+
+            "1. Bakso Vulkano"+
+            "<br>2. Bakso Jumbo"+
+            "<br>3. Bakso Iga"+
+            "<br>4. Bakso Tetelan"+
+            "<br>5. Mie Bakso"+
+            "<br>6. Bakso Biasa"+
+            "<br>7. Sate Iga"+
+            "<br>8. Mie Ayam");
+        function Mulai() {
+            var Pilih = document.getElementById("Menu").value;
+            var Hasil = document.getElementById("Hasil");
+        switch(Pilih) {
+            case "Bakso Vulkano","bakso vulkano":
+                Hasil.innerHTML = "<h4>Total Bayar : Rp 50.000</h4>";
+                break;
+            case "Bakso Jumbo","bakso jumbo":
+                Hasil.innerHTML = "<h4>Total Bayar : Rp 30.000</h4>";
+                break;
+            case "Bakso Iga","bakso iga":
+                Hasil.innerHTML = "<h4>Total Bayar : Rp 35.000</h4>";
+                break;
+            case "Bakso Tetelan","bakso tetelan":
+                Hasil.innerHTML = "<h4>Total Bayar : Rp 20.000</h4>";
+                break;
+            case "Mie Bakso","mie bakso":
+                Hasil.innerHTML = "<h4>Total Bayar : Rp 15.000</h4>";
+                break;
+            case "Bakso Biasa","bakso biasa":
+                Hasil.innerHTML = "<h4>Total Bayar : Rp 10.000</h4>";
+                break;
+            case "Sate Iga","sate ige":
+                Hasil.innerHTML = "<h4>Total Bayar : Rp 15.000</h4>";
+                break;
+            case "Mie Ayam","mie ayam":
+                Hasil.innerHTML = "<h4>Total Bayar : Rp 7.000</h4>";
+                break;
+                default:
+        }
+    }
+        </script>
+    </body>
+</html>
