@@ -1,0 +1,40 @@
+<html>
+   <head>
+    <title>Contoh Program Object HTML</title>
+   </head>
+   <body>
+    <h1>PROGRAM OBJECT PADA HALAMAN WEB</h1>
+    <h4>Menampilkan Data Diri Dan Biodata</h4>
+    <script>
+        const nama={
+            firstName : "Ahmad",
+            MidleName : "Khoiri",
+            LastName : "Rizal",
+            Age : "21",
+            Graduete : false,
+        };
+        const bio={
+           NIM : 2022010128,
+           TTD : "Jepara, 14 Februari 2002",
+           Prodi : "Rekayasa Perangkat Lunak",
+           Jenjang : "D4",
+           Semester : "2 (Dua)",
+           NamaPerguruan : "Politeknik Balekambang Jepara",
+           TahunMasuk : 2022,
+           Motivasi : "<li>Ingin melanjutkan menuntun ilmu dan mencari pengalam baru,<li>serta mendapatkan pekerjaan yang lebih layak dan baik",
+        };
+
+        document.write(`Nama Saya : ${nama.firstName}${nama.MidleName}${nama.LastName}<br>
+            Umur Saya : ${nama.Age}<br>
+            Kelulusan : ${nama.Graduete ? "Sudah Lulus":"Belum Lulus"}<br>
+            NIM : ${bio.NIM}<br>
+            Tempat, Tanggal Lahir : ${bio.TTD}<br>
+            Prodi : ${bio.Prodi}<br>
+            Jenjang : ${bio.Jenjang}<br>
+            Semester : ${bio.Semester}<br>
+            Nama Perguruan : ${bio.NamaPerguruan}<br>
+            Tahun Masuk : ${bio.TahunMasuk}<br>
+            Motivasi : ${bio.Motivasi}<br>`);
+    </script>
+   </body>
+</html>
