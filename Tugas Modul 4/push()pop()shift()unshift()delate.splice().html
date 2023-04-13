@@ -1,0 +1,31 @@
+<html>
+   <head>
+    <title>Contoh Program Array Manipulasi Data HTML</title>
+   </head>
+   <body>
+    <h1>PROGRAM ARRAY MANIPULASI PADA HALAMAN WEB</h1>
+    <script>
+        var Item = ["Batu"," Kayu"," Metal"," Emas"," Perak"," Perunggu"," Kaca"];
+        var Hobi = ["Berenang"," Bisbol"," Basket"," Tolak Peluru"," Lari Cepat"," Membaca"," Game"]
+            document.write("Array Item Dari = <li>"+Item+"<br>Array Hobi Dari = <li>"+Hobi);
+        var push = Item.push(" Berlian"," Pirit");
+            document.write("<hr><h4>Kita akan menambah data Berlian dan Pirit menggunakan push</h4>"+
+            "Range array bertambah dari 7 data menjadi "+push+" data<br>data Item = "+Item+"<br><hr>");
+        var pop = Hobi.pop();
+            document.write("<h4>Kita akan menghapus data element terakhir menggunakan pop</h4>"+
+            "Range array terakhir yang kita ambil adalah "+pop+"<br>data Hobi = "+Hobi+"<br><hr>");
+        var shift = Item.shift();
+            document.write("<h4>Kita akan mengelurkan element pertama menggunakan shift</h4>"+
+            "Range array pertama yang kita ambil adalah "+shift+"<br>data Item = "+Item+"<br><hr>");
+        var unshift = Hobi.unshift("Karate ");
+            document.write("<h4>Kita akan menambahkan element pertama menggunakan unshift</h4>"+
+            "Jadi data "+pop+" yang sudah kita ambil sebelumnya akan kita tambah data (Karate)<br>data Hobi = "+Hobi+"<br><hr>");
+        delete Item[2];
+            document.write("<h4>Kita akan mengelurkan element yang kita inginkan mengunakan delete</h4>"+
+            "Range array dari Shift yang akan kita ambil adalah (Emas)<br>data Item = "+Item+"<br><hr>");
+        var splice = Hobi.splice(3, 2);
+            document.write("<h4>Kita akan menghapus element dari seri ke 3 sebanyak 2 kali menggunakan splice</h4>"+
+            "Jadi data yang akan kita hapus adalah (Basket dan Tolak Peluru)<br>data Hobi = "+Hobi+"<br><hr>");
+    </script>
+   </body>
+</html>
