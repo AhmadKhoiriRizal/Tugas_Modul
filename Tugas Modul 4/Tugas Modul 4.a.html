@@ -1,0 +1,240 @@
+<html>
+    <head>
+        <title>TecnoPhoneIo</title>
+        <style>
+            .container {
+                font-family:'Franklin Gothic Medium';
+                margin:20px;
+                padding: 20px;
+                border: 1px solid #000000;
+                background-color: rgb(0, 213, 157);
+                max-width: 600*px;
+            }
+            
+            .item{
+                display:flex;
+                flex-direction:row;
+                justify-content:space-between;
+                margin-bottom:10px; 
+            }
+            </style>
+            </head>
+            <body>
+                <form>
+                <div class="container">
+                    <h1>Tecno Phone Io</h1>
+                    <p>Hai, Selamat Datang di Tecno Phone Io</p>
+                    <h2>Daftar List Barang</h2>
+                    <div class="item">
+                        <span>1. Samsung Galaxy S21 Ultra 5G</span><span>Rp 14.000.000,-</span>
+                    </div><div class="item">
+                        <span>2. Apple iPhone 13 Pro Max </span><span>Rp 24.999.000,-</span>
+                    </div><div class="item">
+                        <span>3. Xiaomi Mi 11 </span><span>Rp 9.999.000,-</span>
+                    </div><div class="item">
+                        <span>4. OPPO Find X3 Pro</span><span>Rp 14.999.000,-</span>
+                    </div><div class="item">
+                        <span>5. Vivo X60 Pro </span><span>Rp 10.999.000,-</span>
+                    </div><div class="item">
+                        <span>6. Realme GT </span><span>Rp 7.999.000,-</span>
+                    </div><div class="item">
+                        <span>7. Asus ROG Phone 5 </span><span>Rp 10.999.000,-</span>
+                    </div><div class="item">
+                        <span>8. Nokia 8.3 </span><span>Rp 7.499.000,-</span>
+                    </div><div class="item">
+                        <span>9. OnePlus 9 Pro </span><span>Rp 12.999.000,-</span>
+                    </div><div class="item">
+                        <span>10. Sony Xperia 1 III </span><span>Rp 19.999.000,-</span>
+                    </div><div class="item">
+                        <span>11. LG Wing </span><span>Rp 13.999.000,-</span>
+                    </div><div class="item">
+                        <span>12. Motorola Moto G100 </span><span>Rp 5.299.000,-</span>
+                    </div><div class="item">
+                        <span>13. HTC U12+ </span><span>Rp 11.999.000,-</span>
+                    </div><div class="item">
+                        <span>14. BlackBerry KEY2 </span><span>Rp 6.299.000,-</span>
+                    </div><div class="item">
+                        <span>15. Lenovo Legion Phone Duel </span><span>Rp 9.999.000,-</span>
+                    </div><div class="item">
+                        <span>16. Google Pixel 5 </span><span>Rp 10.999.000,-</span>
+                    </div><div class="item">
+                        <span>17. Huawei P40 Pro+ </span><span>Rp 15.999.000,-</span>
+                    </div><div class="item">
+                        <span>18. ZTE Axon 30 Ultra </span><span>Rp 8.999.000,-</span>
+                    </div><div class="item">
+                        <span>19. Meizu 18 </span><span>Rp 9.999.000,-</span>
+                    </div><div class="item">
+                        <span>20. Poco F3 </span><span>Rp 4.199.000,-</span>
+                    </div>
+                    <button type="submit" onclick="prosesbeli()">Beli Barang</button>
+                </form>
+            </div>
+            <div id="menu-beli" style="display: none;">
+            <div class="container">
+                <h2>Menu Pembalian Tecno Phone Io</h2>
+                <div class="item">Nama Pemesan :
+                    <input type="text"id="nama" placeholder="masukkan nama anda">
+                </div>
+                <div class="item">Nomer Handphone :
+                    <input type="text"id="nohp" placeholder="masukkan nomer hp anda">
+                </div>
+                <div class="item">Tanggal :
+                    <input type="datetime-local"id="date">
+                </div>
+                        <div class="item">Pilih Barang :
+                            <select id="barang"name="barang">                            
+                            <option value="0">Silahkan Pilih</option>
+                            <option value="1">1. Samsung Galaxy S21 Ultra 5G (Rp 18.999.000)</option>
+                            <option value="2">2. Apple iPhone 13 Pro Max (Rp 24.999.000)</option>
+                            <option value="3">3. Xiaomi Mi 11 (Rp 9.999.000)</option>
+                            <option value="4">4. OPPO Find X3 Pro (Rp 14.999.000)</option>
+                            <option value="5">5. Vivo X60 Pro (Rp 10.999.000)</option>
+                            <option value="6">6. Realme GT (Rp 7.999.000)</option>
+                            <option value="7">7. Asus ROG Phone 5 (Rp 10.999.000)</option>
+                            <option value="8">8. Nokia 8.3 (Rp 7.499.000)</option>
+                            <option value="9">9. OnePlus 9 Pro (Rp 12.999.000)</option>
+                            <option value="10">10. Sony Xperia 1 III (Rp 19.999.000)</option>
+                            <option value="11">11. LG Wing (Rp 13.999.000)</option>
+                            <option value="12">12. Motorola Moto G100 (Rp 5.299.000)</option>
+                            <option value="13">13. HTC U12+ (Rp 11.999.000)</option>
+                            <option value="14">14. BlackBerry KEY2 (Rp 6.299.000)</option>
+                            <option value="15">15. Lenovo Legion Phone Duel (Rp 9.999.000)</option>
+                            <option value="16">16. Google Pixel 5 (Rp 10.999.000)</option>
+                            <option value="17">17. Huawei P40 Pro+ (Rp 15.999.000)</option>
+                            <option value="18">18. ZTE Axon 30 Ultra (Rp 8.999.000)</option>
+                            <option value="19">19. Meizu 18 (Rp 9.999.000)</option>
+                            <option value="20">20. Poco F3 (Rp 4.199.000)</option>
+                            </select>
+                        </div>
+
+                                <div class="item">Jumlah :
+                                    <input type="number"id="jumlah"name="jumlah"min="0"placeholder="masukkan jumlah barang">
+                                </div>
+                                    <input type="checkbox"id="member"name="member">
+                                    Dapatkan diskon 10% jika anda adalah member<br><br>
+                                    <div class="item">
+                                    <button type="button"onclick="TotalHarga()">Total Harga</button>
+                                    <input type="button" value="Batal" onclick="batal()" />
+                                    <div id="kembali-login" style="display: none;">
+                                    <button type="button" onclick="kembaliLogin()">Kembali ke halaman login</button>
+                                    </div>
+                                </div>
+
+                            <h2>Jumlah Pembayaran</h2>
+                            <p id="diskon"></p>
+                            <p id="hasil"></p>
+                        </div>
+                        <script>
+                            function batal() {
+                var option = document.querySelector(null)
+                document.getElementById("barang").value ="0";
+                document.getElementById("jumlah").value =0;
+                document.getElementById("member").checked = false;
+                document.getElementById("diskon").innerHTML=null;
+                document.getElementById("hasil").innerHTML =null;
+                            }
+                            function TotalHarga(){
+
+                                const barang = document.getElementById("barang").value;
+                                const jumlah = parseInt(document.getElementById("jumlah").value);
+                                const member = document.getElementById("member").checked;
+
+
+                                let harga;
+                                switch(barang){
+                                    case "1":
+                                        harga = 14000000;
+                                        break;
+                                    case "2":
+                                        harga = 24999000;
+                                        break;
+                                    case "3":
+                                        harga = 9999000;
+                                        break;
+                                    case "4":
+                                        harga = 14999000;
+                                        break;
+                                    case "5":
+                                        harga = 10999000;
+                                        break;
+                                    case "6":
+                                        harga = 7999000;
+                                        break;
+                                    case "7":
+                                        harga = 10999000;
+                                        break;
+                                    case "8":
+                                        harga = 7499000;
+                                        break;
+                                    case "9":
+                                        harga = 12999000;
+                                        break;
+                                    case "10":
+                                        harga = 19999000;
+                                        break;
+                                    case "11":
+                                        harga = 13999000;
+                                        break;
+                                    case "12":
+                                        harga = 5299000;
+                                        break;
+                                    case "13":
+                                        harga = 11999000;
+                                        break;
+                                    case "14":
+                                        harga = 6299000;
+                                        break;
+                                    case "15":
+                                        harga = 9999000;
+                                        break;
+                                    case "16":
+                                        harga = 10999000;
+                                        break;
+                                    case "17":
+                                        harga = 15999000;
+                                        break;
+                                    case "18":
+                                        harga = 8999000;
+                                        break;
+                                    case "19":
+                                        harga = 9999000;
+                                        break;
+                                    case "20":
+                                        harga = 4199000;
+                                        break;
+                                    default:
+                                        harga=0;
+                                    
+                                }
+                                let totalhargabarang = harga*jumlah;
+                                let diskon ="";
+                                if (member){
+                                    diskon =totalhargabarang*0.1;
+                                    totalhargabarang = totalhargabarang - diskon;
+                                }
+                                document.getElementById("diskon").innerHTML ="Total diskon : Rp "+diskon.toLocaleString();
+                                document.getElementById("hasil").innerHTML ="Total harga : Rp "+totalhargabarang.toLocaleString();
+                            }
+             </script>
+             </div>
+             <script>
+                function prosesbeli() {
+                  if (true) {
+                    document.getElementById("menu-beli").style.display = "block";
+                    document.getElementsByTagName("form")[0].style.display = "none";
+                    document.getElementById("kembali-login").style.display = "block";
+                  } 
+                }
+                function kembaliLogin() {
+                    document.getElementById("menu-beli").style.display = "none";
+                    document.getElementsByTagName("form")[0].style.display = "block";
+                    document.getElementById("kembali-login").style.display = "none";
+                }
+          
+                document.querySelector('form').addEventListener('submit', function(event) {
+                  event.preventDefault();
+                  prosesLogin();
+                });
+              </script>
+       </body>
+</html>

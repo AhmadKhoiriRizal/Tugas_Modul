@@ -1,0 +1,228 @@
+<html>
+<head>
+    <title>Kasir Toko Handphone</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #85a190;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #008080;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #008080;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .subtotal {
+            text-align: right;
+            font-weight: bold;
+            font-size: 18px;
+            color: #008080;
+        }
+        .btn {
+            background-color: #008080;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #006666;
+        }
+        .form-input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+        <h1>Salsa Phone</h1>
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" /><br /><br />
+
+            <label for="no-hp">No. HP:</label>
+            <input type="text" id="no-hp" name="no-hp" /><br /><br />
+            <button type="submit" onclick="prosesLogin()">Beli</button>
+            </div></form>
+        <div id="menu-beli" style="display: none;">
+        <div class="container">
+        
+            <label for="barang">Pilih Barang:</label>
+            <select id="barang">
+                <option value="">-- Pilih Barang --</option>
+                <opton value="iPhone 14 Promax">iPhone 14 Promax (Rp 15.990.000)</option>
+                <option value="Samsung Galaxy A52">Samsung Galaxy A52 (Rp 4.999.000)</option>
+                <option value="Xiaomi Redmi Note 10 Pro">Xiaomi Redmi Note 10 Pro (Rp 3.799.000)</option>
+                <option value="Realme 8 Pro">Realme 8 Pro (Rp 3.499.000)</option>
+            </select><br /><br />
+
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" name="jumlah" /><br /><br />
+
+            <input type="button" value="Tambahkan ke Keranjang" onclick="tambahKeranjang()" />
+            <input type="button" value="Batal" onclick="batal()" /><br /><br />
+
+            <input type="checkbox" id="member" name="member" onclick="ubah()" /> Member Discount (10%)<br /><br />
+
+            <table id="keranjang">
+                <thead>
+                    <tr>
+                        <th>Barang</th>
+                        <th>Jumlah</th>
+                        <th>Harga Satuan</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="subtotal">Total:</td>
+                        <td class="subtotal" id="total">Rp 0</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <input type="submit" value="Beli Sekarang" class="btn" />
+            <input type="reset" value="Bersihkan" class="btn" />
+            
+        </div>
+        
+        <script type="text/javascript">
+            var keranjang = [];
+        
+            function tambahKeranjang() {
+                var barang = document.getElementById("barang").value;
+                var jumlah = parseInt(document.getElementById("jumlah").value);
+                var harga = 0;
+                switch (barang) {
+                    case "Samsung Galaxy A52":
+                        harga = 4999000;
+                        break;
+                    case "Xiaomi Redmi Note 10 Pro":
+                        harga = 3799000;
+                        break;
+                    case "Realme 8 Pro":
+                        harga = 3499000;
+                        break;
+                    case "iPhone 14 Promax":
+                        harga = 15990000;
+                        break;
+
+                }
+                var subtotal = jumlah * harga;
+                var item = {
+                    barang: barang,
+                    jumlah: jumlah,
+                    harga: harga,
+                    subtotal: subtotal
+                };
+                keranjang.push(item);
+                tampilkanKeranjang();
+            }
+        
+            function tampilkanKeranjang() {
+                var tbody = document.getElementsByTagName("tbody")[0];
+                tbody.innerHTML = "";
+                var total = 0;
+                keranjang.forEach(function (item, index) {
+                    var tr = document.createElement("tr");
+        
+                    var tdBarang = document.createElement("td");
+                    var tdJumlah = document.createElement("td");
+                    var tdHarga = document.createElement("td");
+                    var tdSubtotal = document.createElement("td");
+        
+                    tdBarang.innerHTML = item.barang;
+                    tdJumlah.innerHTML = item.jumlah;
+                    tdHarga.innerHTML = "Rp " + item.harga.toLocaleString();
+                    tdSubtotal.innerHTML = "Rp " + item.subtotal.toLocaleString();
+        
+                    tr.appendChild(tdBarang);
+                    tr.appendChild(tdJumlah);
+                    tr.appendChild(tdHarga);
+                    tr.appendChild(tdSubtotal);
+        
+                    tbody.appendChild(tr);
+        
+                    total += item.subtotal;
+                });
+                document.getElementById("total").innerHTML = "Rp " + total.toLocaleString();
+            }
+        
+            function batal() {
+                keranjang = [];
+                tampilkanKeranjang();
+                document.getElementById("member").checked = false;
+            }
+        
+            function ubah() {
+                var member = document.getElementById("member").checked;
+                var total = "";
+                keranjang.forEach(function (item, index) {
+                    var diskon = "";
+                    if (member) {
+                        diskon = item.subtotal * 0.1;
+                    }
+                    item.subtotal -= diskon;
+                    var tr = document.getElementsByTagName("tbody")[0].getElementsByTagName("tr")[index];
+                    var tdSubtotal = tr.getElementsByTagName("td")[3];
+                    tdSubtotal.innerHTML = "Rp " + item.subtotal.toLocaleString();
+                    total += item.subtotal;
+                });
+                document.getElementById("total").innerHTML = "Rp " + total.toLocaleString();
+            }
+        </script>
+        </div>
+        <script>
+            function prosesLogin() {
+        var name = document.getElementById("nama").value;
+        var password = document.getElementById("no-hp").value;
+
+        // Lakukan validasi email dan password di sini
+        if (name === "contoh@email.com" && password === "123456") {
+          // Jika login berhasil, tampilkan menu beli dan sembunyikan form login
+          document.getElementById("menu-beli").style.display = "block";
+          document.getElementsByTagName("form")[0].style.display = "none";
+        } else {
+          // Jika login gagal, tampilkan pesan error
+          alert("Email atau password salah!");
+        }
+      }
+      document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // prevent form submission
+        prosesLogin()});
+        </script>
+</body>
+</html>
