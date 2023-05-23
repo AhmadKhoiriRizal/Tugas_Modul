@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="msapplication-TileColor" content="id.edge">
+    <title>kelulusan_mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="herocont">
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <a href="index.html"><img src="logo.png"></a>
+            </div>
+            <div class="nav-links" id="nav-links"> 
+                <i class="fa fa-close" onclick="closeMenu()"></i>
+                <ul>
+                    <a href="index.html"><li>HOME</li></a>
+                    <a href="evaluation.html"><li>EVALUATION</li></a>
+                    <a href="array.html"><li>ARRAY</li></a>
+                    <a href="profile.html"><li>PROFILE</li></a>
+                    <a href="contact me.html"><li>CONTACT ME</li></a>
+                </ul>
+                <button type="button" class="btn">SIGN UP</button>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </div>
+        <section class="contact">
+            <div class="content">
+                <h2>Contact Us</h2>
+                <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+            </div>
+            <div class="containercp">
+                <div class="contactinfo">
+                    <div class="boxcp">
+                        <div class="iconcp"><a href="https://maps.app.goo.gl/Eu8nZFL2Ki8HD7V7A"><i class="fa fa-map-marker" aria-hidden="true"></i></a></div>
+                        <div class="textcp">
+                            <a href="https://maps.app.goo.gl/Eu8nZFL2Ki8HD7V7A"><h3>Address</h3></a>
+                            <p>Desa Nalumsari RT 01 RW 01,<br>Kecamatan Nalumsari, Jepara,<br>59466</p>
+                        </div>
+                    </div>
+                    <div class="boxcp">
+                        <div class="iconcp"><a href="https://chat.whatsapp.com/B8Hnh93bSSgGnnP9PxnjRG"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></div>
+                        <div class="textcp">
+                            <a href="https://chat.whatsapp.com/B8Hnh93bSSgGnnP9PxnjRG"><h3>Phone</h3></a>
+                            <p>085-789-173-041</p>
+                        </div>
+                    </div>
+                    <div class="boxcp">
+                        <div class="iconcp"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                        <div class="textcp">
+                            <h3>Email</h3>
+                            <p>danielfutakata@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactForm">
+                    <form id="conatctme">
+                        <h2>Send Message</h2>
+                        <div class="inputBox">
+                            <input type="text" id="name" name="" required="required">
+                            <span>Full Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" id="gmail" name="" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox">
+                            <textarea id="message" required="required"></textarea>
+                            <span>Type your Message...</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" name="" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

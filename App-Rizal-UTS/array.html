@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="msapplication-TileColor" content="id.edge">
+        <title>array_metod</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+    <div class="heroarr">
+        <div class="nav-bar">
+            <div class="nav-logo">
+              <a href="index.html"><img src="logo.png"></a>
+            </div>
+            <div class="nav-links" id="nav-links"> 
+                <i class="fa fa-close" onclick="closeMenu()"></i>
+                <ul>
+                    <a href="index.html"><li>HOME</li></a>
+                    <a href="evaluation.html"><li>EVALUATION</li></a>
+                    <a href="array.html"><li>ARRAY</li></a>
+                    <a href="profile.html"><li>PROFILE</li></a>
+                    <a href="contact me.html"><li>CONTACT ME</li></a>
+                </ul>
+                <button type="button" class="btn">SIGN UP</button>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </div>
+        <div class="foam-array">
+            <h1>Array Metod Data Mahasiswa</h1>
+            <form>
+            <label for="namaMhs">Nama:</label>
+            <input type="text" id="namaMhs" placeholder="Input data nama Mahasiswa" required>
+            <label for="tglLahir">Tanggal Lahir:</label>
+            <input type="date" id="tglLahir" placeholder="Input tanggal lahir" required>
+            <label for="merekHP">Merek HP:</label>
+            <input type="text" id="merekHP" placeholder="Input merek HP" required>
+            <div id="navigationButtons">
+            <button type="button" onclick="addData()">Add</button>
+            <button type="button" onclick="performPush()">Push</button>
+            <button type="button" onclick="performPop()">Pop</button>
+            <button type="button" onclick="performSplice()">Splice</button>
+            <button type="button" onclick="performUnshift()">Unshift</button>
+            </form>
+        </div>
+        <div id="output">
+            <table id="hasilTable">
+                <thead>
+                    <tr>
+                        <th>Nama Mahasiswa</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Merek HP</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="outputBody"></tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+<script src="array.js"></script>
+</body>
+</html>
