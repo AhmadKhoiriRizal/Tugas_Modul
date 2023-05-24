@@ -108,6 +108,8 @@ function performPush() {
 function performPop() {
   if (datanama.length > 0) {
     datanama.pop();
+    datatanggal.pop();
+    datamerekhp.pop();   
     displayData();
   } else {
     alert('Tidak ada data array \nMasukkan Data Array Yang Baru');

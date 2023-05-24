@@ -51,7 +51,7 @@ function tampilNilai() {
                  "<td>" + mataKuliah + "</td>" +
                  "<td>" + nilai + "</td>" +
                  "<td>" + indeksNilai + "</td>" +
-                 "<td><button onclick=\"hapusData('" + nim + "')\">Hapus</button></td>" +
+                 "<td><button class='deleteButton' onclick='hapusData(this)'>Hapus</button></td>" +
                  "</tr>";
 
   var hasilBody = document.getElementById('hasilBody');
@@ -67,15 +67,7 @@ function resetForm() {
   document.getElementById('nilaiForm').reset();
   document.getElementById('hasilBody').innerHTML = '';
 }
-function hapusData(nim) {
-  var hasilBody = document.getElementById('hasilBody');
-  var rows = hasilBody.getElementsByTagName('tr ');
-  for (var i = 0; i < rows.length; i++) {
-    var row = rows[i];
-    var rowNim = row.getElementsByTagName('td')[0].textContent;
-    if (rowNim === nim) {
-      row.parentNode.removeChild(row);
-      break;
-    }
-  }
+function hapusData(button) {
+  var row = button.parentNode.parentNode;
+  row.parentNode.removeChild(row);
 }
