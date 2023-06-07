@@ -69,10 +69,10 @@ function tugascontrolflow() {
             break;
         case '2020':
             if (TCFProdi==1) {
-                var ABI = prompt('Input Kelas : ');
-                if (ABI=='A') {
+                var ABI = prompt('Input Kelas A/B/C : ');
+                if (ABI=='A'||ABI=='a') {
                     alert('Membaca Jus 1 - 15')
-                } else if (ABI=='B') {
+                } else if (ABI=='B'||ABI=='b') {
                     alert('Membaca Jus 16 - 30')
                 } else {
                     alert('input error');
@@ -85,21 +85,21 @@ function tugascontrolflow() {
             break;
         case '2022':
             if (TCFProdi==1) {
-                var ABI = prompt('Input Kelas : ');
-                if (ABI=='A') {
+                var ABI = prompt('Input Kelas A/B/C : ');
+                if (ABI=='A'||ABI=='a') {
                     alert('Membaca Jus 1 - 15')
-                } else if (ABI=='B') {
+                } else if (ABI=='B'||ABI=='b') {
                     alert('Membaca Jus 16 - 30')
-                } else if (ABI=='C') {
+                } else if (ABI=='C'||ABI=='c') {
                     alert('Membaca Jus 1 - 15')
                 } else {
                     alert('input error');
                 }
             } else if (TCFProdi==2) {
-                var RPL = prompt('Input Kelas : ');
-                if (RPL=='A') {
+                var RPL = prompt('Input Kelas A/B/C : ');
+                if (RPL=='A'||RPL=='a') {
                     alert('Membaca Jus 16 - 30')
-                } else if (RPL=='B') {
+                } else if (RPL=='B'||RPL=='b') {
                     alert('Membaca Jus 1 - 15')
                 } else {
                     alert('input error');
