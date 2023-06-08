@@ -1,13 +1,12 @@
 // Functional Execution Context
 function functionalexecutioncontext () {
     var funexc = document.getElementById('funexc').value;
-    var hasilfunexc = document.getElementById('hasilfunexc').innerHTML;
-    functionalexecutioncontext2();
-    hasilfunexc.innerHTML = funexc+" di dalam function ke-1";
+    var sayafunexc = funexc;
+    functionalexecutioncontext2(sayafunexc);
 }
-function functionalexecutioncontext2() {
-    var funexc = document.getElementById('funexc').value;
-    hasilfunexc.innerHTML = funexc+" di dalam function ke-2";
+function functionalexecutioncontext2(sayafunexc) {
+    var hasilfunexc = document.getElementById('hasilfunexc');
+    hasilfunexc.innerHTML = sayafunexc+" di dalam function ke-2";
 }
 functionalexecutioncontext ();
 hasilfunexc.innerHTML = funexc+" hasil dari function globals";
@@ -49,7 +48,7 @@ function optparahitung (a,b,c) {
 function optionalparameter () {
     var optparan1 = document.getElementById('optparan1').value;
     var optparan2 = document.getElementById('optparan2').value;
-    var outputoptpara = optparahitung(optparan1, optparan2);
+    var outputoptpara = optparahitung(optparan1, optparan2,0);
     displayoptpara(outputoptpara);
 }
 
@@ -61,7 +60,7 @@ function displayoptpara (outputoptpara) {
 
 // Default Parameter
 function defaultparameter (namadefpara="Rizal") {
-    var defpara = document.getElementById('defpara').value;
+    var defpara = document.getElementById('defpara').textContent;
     var outputdefpara = document.getElementById('hasildefpara');
     outputdefpara.textContent = "Nama Saya "+namadefpara+", berumur "+defpara;
 
