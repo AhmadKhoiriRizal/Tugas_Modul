@@ -92,3 +92,59 @@ function functionreturn() {
     document.getElementById("hasilfunret").textContent = fullnamefunret;
   }
   
+
+  // Tugas Study Kasus Function
+  function hitungRataRata() {
+    const tugas1 = parseInt(document.getElementById('tugas1').value);
+    const tugas2 = parseInt(document.getElementById('tugas2').value);
+    const tugas3 = parseInt(document.getElementById('tugas3').value);
+    const tugas4 = parseInt(document.getElementById('tugas4').value);
+    const tugas5 = parseInt(document.getElementById('tugas5').value);
+  
+    const nilaiSiswa = [tugas1, tugas2, tugas3, tugas4, tugas5];
+  
+    const rataRata = calculateAverage(nilaiSiswa);
+    const status = determineStatus(rataRata);
+
+    var outputtf = "<tr>"+
+                        "<td>"+`${rataRata}`+"</td>"+
+                        "<td>"+`${status}`+"</td>"+
+                    "</tr>";
+    var hasilbodytf = document.getElementById("hasilbodytf");
+    hasilbodytf.innerHTML +=outputtf;
+  }
+  
+  function calculateAverage(values) {
+    let sum = 0;
+    for (let i = 0; i < values.length; i++) {
+      sum += values[i];
+    }
+    const average = sum / values.length;
+    return average.toFixed(2);
+  }
+  
+  function determineStatus(average) {
+    if (average >= 85 && average <= 100) {
+        return "Lulus"
+    } else if (average >= 79 && average <= 84) {
+        return "Lulus"
+    } else if (average >= 74 && average <= 78) {
+        return "Lulus"
+    } else if (average >= 69 && average <= 73) {
+        return "Lulus";
+    } else if (average >= 64 && average <= 68) {
+        return "Tidak Lulus";
+    } else if (average >= 59 && average <= 63) {
+        return "Tidak Lulus";
+    } else if (average >= 54 && average <= 58) {
+        return "Tidak Lulus";
+    } else if (average >= 41 && average <= 53) {
+        return "Tidak Lulus";
+    } else if (average >=0 && average <= 40) {
+        return "Tidak Lulus";
+    }
+      else if (average >=101 || average <=-1) {
+        alert("Input nilai yang anda masukkan salah<br/> Harap Masukkan Nilai Yang Sesuai!!");
+    }
+  }
+  
