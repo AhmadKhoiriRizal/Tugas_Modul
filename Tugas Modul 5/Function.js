@@ -60,10 +60,9 @@ function displayoptpara (outputoptpara) {
 
 // Default Parameter
 function defaultparameter (namadefpara="Rizal") {
-    var defpara = document.getElementById('defpara').textContent;
+    var defpara = document.getElementById('defpara').value;
     var outputdefpara = document.getElementById('hasildefpara');
     outputdefpara.textContent = "Nama Saya "+namadefpara+", berumur "+defpara;
-
 }
 
 // Rest Parameter
