@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="asset-find/style.css">
+  <script src = "asset-find/Game.js"></script>
+</head>
+<div class="nav-logo">
+  <div><a href="../index.html"><img src="../../asset-menu/img/back.gif"></a></div>
+  <div><img src="asset-find/name-fine-dif.gif"></div>
+  <div>
+    <!-- <button id="openPopupBtn">Cara Bermain</button>
+    <div id="popupBackground"></div>
+    <div id="popupContent">
+      <h2>Aturan Main</h2>
+      <div class="about-swiper">
+        <p>Pilih game suseuai gambar</p>
+        <p>Klik pada gambar untuk masuk ke dalam game</p>
+        <p>Masukan Nama Pemain</p>
+        <p>Selamat Bermain</p>
+      </div>
+      <button id="closePopupBtn"><img src="../asset-menu/img/back-pop.png"></button>
+    </div> -->
+  </div>
+</div>
+<body onload= "generateFaces()">
+  <div id="container">
+    <div class="header">
+    <div class="variabel">
+        <span>Selamat Datang Dan Bermain "<span id="userName"></span>"</span>
+        <button id = "btn" onclick="location.reload()">Menyerah</button>
+        <p id = "stats"></p>
+      </div>
+    </div>
+    <div id="board-game">
+      <div id = "leftSide"></div>
+      <div id = "rightSide"></div>
+    </div>
+    <div id="gameOverPopup" class="popup">
+      <div class="popup-content">
+        <h2>Game Over</h2>
+        <p>Nama Pemain "<span id="userName-output"></span>"</p>
+        <p>level yang diraih <span id="levelSpan"></span></p>
+        <p>Score Total : <span id="scoreSpan"></span></p>
+        <button id="closeGameOverPopup">Close</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  // Kode JavaScript di otherpage.html
+  document.addEventListener('DOMContentLoaded', () => {
+    const userNameSpan = document.getElementById('userName');
+    const userName = localStorage.getItem('user_name');
+    const userNameoutput = document.getElementById('userName-output');
+    userNameoutput.textContent = userName ? userName : 'Guest';
+    userNameSpan.textContent = userName ? userName : 'Guest';
+  });
+</script>
+</html>

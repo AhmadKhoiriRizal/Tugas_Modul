@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fody Slider</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="asset-swiper/namePlayer.css">
+    <link rel="stylesheet" href="asset-swiper/style.css">
+  </head>
+
+  <body>
+    <section id="tranding">
+      <!-- <div class="container"> -->
+        <div class="nav-bar">
+          <div class="nav-logo">
+              <div><a href="../index.html"><img src="../asset-menu/img/back.gif"></a></div>
+              <div><img src="../asset-menu/img/Name-logo-swiper.gif"></div>
+              <div><button id="openPopupBtn">Cara Bermain</button>
+                <div id="popupBackground"></div>
+                <div id="popupContent">
+                  <h2>Aturan Main</h2>
+                  <div class="about-swiper">
+                    <p>Pilih game sesuai gambar</p>
+                    <p>Klik pada gambar untuk masuk ke dalam game</p>
+                    <p>Masukan Nama Pemain</p>
+                    <p>Selamat Bermain</p>
+                  </div>
+                  <button id="closePopupBtn"><img src="../asset-menu/img/back-pop.png"></button>
+                </div>
+              </div>
+          </div>
+      </div>
+      <!-- </div> -->
+      <div class="container">
+        <div class="swiper tranding-slider">
+          <div class="swiper-wrapper">
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img id="openPopupBtn-nama" src="images/fine-dif.gif" alt="Tranding">
+                <div id="popupBackground-nama">
+                  <div id="popupContent-nama">
+                    <h2>Enter Your Name</h2>
+                    <input type="text" id="nameInput-player" placeholder="Your Name">
+                    <a href="Find-dif/index.html"><button id="submitNameBtn-game">Submit</button></a>
+                    <button id="closePopupBtn-nama">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img id="openPopupBtn-nama1" src="images/basmivirus.gif" alt="Tranding">
+                <div id="popupBackground-nama1">
+                  <div id="popupContent-nama1">
+                    <h2>Enter Your Name</h2>
+                    <input type="text" id="nameInput-player1" placeholder="Your Name">
+                    <a href="BasmiVirus/index.html"><button id="submitNameBtn-game1">Submit</button></a>
+                    <button id="closePopupBtn-nama1">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img id="openPopupBtn-nama2" src="images/protectteeth.gif" alt="Tranding">
+                <div id="popupBackground-nama2">
+                  <div id="popupContent-nama2">
+                    <h2>Enter Your Name</h2>
+                    <input type="text" id="nameInput-player2" placeholder="Your Name">
+                    <a href="Protec Teeth/index.html"><button id="submitNameBtn-game2">Submit</button></a>
+                    <button id="closePopupBtn-nama2">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <!-- <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/tranding-food-4.png" alt="Tranding">
+              </div>
+            </div> -->
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <!-- <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/tranding-food-5.png" alt="Tranding">
+              </div>
+            </div> -->
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <!-- <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/tranding-food-6.png" alt="Tranding">
+              </div>
+            </div> -->
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <!-- <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img id="openPopupBtn-nama3" src="images/fine-dif.gif" alt="Tranding">
+                <div id="popupBackground-nama3">
+                  <div id="popupContent-nama3">
+                    <h2>Enter Your Name</h2>
+                    <input type="text" id="nameInput-player3" placeholder="Your Name">
+                    <a href="Find-dif/index.html"><button id="submitNameBtn-game3">Submit</button></a>
+                    <button id="closePopupBtn-nama3">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <!-- Slide-end -->
+          </div>
+
+          <div class="tranding-slider-control">
+            <div class="swiper-button-prev slider-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+            <div class="swiper-button-next slider-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <script src="asset-swiper/namePlayer.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="asset-swiper/script.js"></script>
+  </body>
+
+</html>

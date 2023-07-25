@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Verdana;
+}
+
+.container-index{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    width: 100%;
+    background-color: darkslategrey;
+    justify-content: space-around;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.nav-logo span {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.UNI {
+   color: #ffd33b;
+}
+
+.nav-logo img {
+    width: auto;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* body game */
+.body-game {
+    background-image: url('Board-game.png');
+    background-size: cover;
+    background-repeat: round;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.body-game img {
+    height: 180px;
+    width: 180px;
+    margin-left: -271px;
+    margin-bottom: -208px;
+}
+
+/* .body-game button {
+    padding-left: ;
+} */
+
+/* footers */
+.fotter-bar {
+    width: 100%;
+    height: 60px;
+    background-color: darkslategrey;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.sosial-media {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+.sosial-media img {
+    height: 50px;
+}
+
+.fotter-bar .copyright {
+    color: aliceblue;
+}
+
+.profile-dev img{
+    height: 42px;
+    border-radius: 20px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	    <!-- CSS For Game -->
+    <link rel="stylesheet" href="css/gameshow1.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Script For Game -->
+    <script src="javascript/scriptGame1.js"></script>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-logo">
+            <div><a href="../index.html"><img src="../../asset-menu/img/back.gif"></a></div>
+            <div><img src="image/basmivirus.gif"></div>
+            <div><button id="openPopupBtn">Cara Bermain</button>
+              <div id="popupBackground"></div>
+              <div id="popupContent">
+                <h2>Aturan Main</h2>
+                <div class="about-swiper">
+                  <p>Tembak setiap virus sebanyak mungkin</p>
+                  <p>Waktu habis akan lanjut level</p>
+                  <p>Setiap level akan semakin cepat</p>
+                  <p></p>
+                  <p>Cara tembak:</p>
+                  <p>Tekan kanan pada mouse</p>
+                </div>
+                <button id="closePopupBtn"><img src="../../asset-menu/img/back-pop.png"></button>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="userName"><p>Selamat Bermain "<p id="userName"></p>"</p></div>
+	<div id="viewgame1">
+            <div id="menu1">
+                <img class="one" id="bgMenuG1" src="image/bg-game.png">
+                <div id="playbtn1" onclick="firstViewSFX(); clickToP();"> <img id="bgMenuG1" src="image/Game1/start/Start BTN.png">
+                </div>
+            </div>
+            <div id="stageG1">
+                <div id="stG1">
+                    <span>Nama Pemain "<p id="userName-output"></p>"</span>
+                    <p id="stage-output"></p>
+                    <p id="score-output"></p>
+                </div>
+                <div id="nextStG1"></div>
+            </div>
+            <div id="areaBird"></div>
+            <div id="groundG1"><img width="800px" src="image/Game1/undervirus.png"></div>
+            <div class="game1HUD" id="timeHUD">Time : 0</div>
+            <div class="game1HUD" id="scoreHUD">Score : 0</div>
+            <div class="game1HUD" id="stageHUD">Stage 1</div>
+
+        </div>
+        <script type="text/javascript" src="javascript/script.js"></script>
+        <script>
+            // Kode JavaScript di otherpage.html
+            document.addEventListener('DOMContentLoaded', () => {
+              const userNameSpan = document.getElementById('userName');
+              const userName = localStorage.getItem('user_name1');
+              const userNameoutput = document.getElementById('userName-output');
+              userNameoutput.textContent = userName ? userName : 'Guest';
+              userNameSpan.textContent = userName ? userName : 'Guest';
+            });
+          </script>
+</body>
+</html>

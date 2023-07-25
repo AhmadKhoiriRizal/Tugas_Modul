@@ -1,0 +1,102 @@
+/* Styling for the popup */
+#popupBackground-nama,
+#popupBackground-nama1,
+#popupBackground-nama2,
+#popupBackground-nama3 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  
+#popupContent-nama,
+#popupContent-nama1,
+#popupContent-nama2,
+#popupContent-nama3 {
+  display: none;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffd33b;
+  padding: 20px;
+  border-radius: 15px;
+  z-index: 10000;
+  height: 157px;
+  width: 244px;
+}
+#popupContent-nama,
+#popupContent-nama1,
+#popupContent-nama2,
+#popupContent-nama3 h2 {
+  margin-top: 0;
+}
+
+
+#nameInput-player,
+#nameInput-player1,
+#nameInput-player2,
+#nameInput-player3 {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 13px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+#submitNameBtn-game,
+#submitNameBtn-game1,
+#submitNameBtn-game2,
+#submitNameBtn-game3,
+#closePopupBtn-nama,
+#closePopupBtn-nama1,
+#closePopupBtn-nama2,
+#closePopupBtn-nama3 {
+  padding: 10px 15px;
+  margin-right: 7px;
+  margin-left: 19px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+#closePopupBtn-nama,
+#closePopupBtn-nama1,
+#closePopupBtn-nama2,
+#closePopupBtn-nama3 {
+  background-color: #DC3545;
+}
+
+#closePopupBtn-nama:hover,
+#closePopupBtn-nama1:hover,
+#closePopupBtn-nama2:hover,
+#closePopupBtn-nama3:hover,
+#submitNameBtn-game:hover,
+#submitNameBtn-game1:hover,
+#submitNameBtn-game2:hover,
+#submitNameBtn-game3:hover {
+  background-color: #10dc60;
+  color: black;
+  font-weight: bold;
+}
+
+/* Additional styling for the content */
+.tranding-slide-img,
+.tranding-slide-img1,
+.tranding-slide-img2,
+.tranding-slide-img3 {
+  position: relative;
+}
+
+#playerName,
+#playerName1,
+#playerName2,
+#playerName3 {
+  font-weight: bold;
+}
