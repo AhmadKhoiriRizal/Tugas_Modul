@@ -15,7 +15,7 @@
 .nav-logo {
     width: 100%;
     background-color: darkslategrey;
-    justify-content: space-around;
+    justify-content: space-between;
     display: flex;
     padding-top: 10px;
     padding-bottom: 5px;
@@ -67,7 +67,7 @@
     background-color: darkslategrey;
     display: grid;
     grid-template-columns: repeat(3, auto);
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-top: 10px;
     padding-bottom: 5px;
